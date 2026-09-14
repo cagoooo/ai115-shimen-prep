@@ -1,6 +1,6 @@
 // AI115 海洋實驗室 Service Worker
 // BUILD_VERSION 必須隨每次部署改變，否則瀏覽器不會偵測到新版。
-const BUILD_VERSION = "2026.09.14-3";
+const BUILD_VERSION = "2026.09.14-4";
 const CACHE_PREFIX = "ai115-shimen-";
 const CACHE_NAME = `${CACHE_PREFIX}${BUILD_VERSION}`;
 const PRECACHE_ASSETS = [

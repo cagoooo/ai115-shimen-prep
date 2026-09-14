@@ -1,4 +1,4 @@
-const APP_VERSION = "2026.09.14-3";
+const APP_VERSION = "2026.09.14-4";
 
 (() => {
   "use strict";
