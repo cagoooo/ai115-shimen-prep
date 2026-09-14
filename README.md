@@ -11,6 +11,8 @@
 - 比賽日時間表、出發前互動檢查表與四題小測驗
 - 桃園市官方最新消息、教育部競賽細則、PAIA 工具與學習教材連結
 - `resources/AI115_Taoyuan_Implementation_Plan.pdf`：提供的桃園市實施計畫備查副本
+- `assets/`：favicon、Apple／Android app icon、OG 社群分享圖與原始插畫
+- `manifest.webmanifest`、`sw.js`、`version.json`：GitHub Pages 子路徑相容的 PWA 與新版提示
 
 ## 本機預覽
 
@@ -22,13 +24,27 @@ py -m http.server 4173
 
 接著開啟 <http://127.0.0.1:4173/>。也可以直接雙擊 `index.html`，但用本機伺服器較接近 GitHub Pages 的開啟方式。
 
+若要重新產生圖示與 OG 圖（需要 Python Pillow）：
+
+```powershell
+python scripts\generate-assets.py
+```
+
+若網站內容已修改，請在提交前升級版本，讓 Service Worker 的 byte、`version.json`、`APP_VERSION` 與本地資源 query 一起更新：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\bump-version.ps1 -Notes "更新教材內容"
+```
+
+新版 Service Worker 不會自動打斷學生正在閱讀的頁面；偵測到新版後，會在右下角提示「立刻更新」，由使用者按下後才套用 `skipWaiting` 並重新整理。本站是純靜態單檔頁面，沒有 Vite 動態 chunk，因此不套用只針對 hashed chunk 404 的破壞性清快取自癒流程。
+
 ## 發布到 GitHub Pages
 
-1. 建立一個 GitHub repository，將本資料夾內的檔案放到 repository 根目錄。
+1. 建立一個公開 GitHub repository，將本資料夾內的檔案放到 repository 根目錄。
 2. 到 **Settings → Pages**，選擇 **Deploy from a branch**，分支選 `main`、資料夾選 `/ (root)`。
 3. 等待 GitHub Pages 完成部署，再用手機與電腦各開一次首頁，檢查 PDF 與所有外部資源連結。
 
-本工作區目前尚未綁定 Git remote，因此沒有代替使用者建立 repository、推送或公開網站。公開前請由學校確認學生姓名、照片、家長同意與網站可見範圍；本站沒有放入任何學生個資。
+公開前請由學校確認學生姓名、照片、家長同意與網站可見範圍；本站沒有放入任何學生個資。OG 與 canonical URL 已預設為 `https://cagoooo.github.io/ai115-shimen-prep/`。
 
 ## 更新原則
 

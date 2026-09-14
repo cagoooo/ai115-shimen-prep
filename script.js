@@ -1,3 +1,5 @@
+const APP_VERSION = "2026.09.14-3";
+
 (() => {
   "use strict";
 
@@ -126,4 +128,136 @@
     }, { rootMargin: "-30% 0px -55% 0px", threshold: [0, .2, .6] });
     sections.forEach((section) => observer.observe(section));
   }
+})();
+
+// PWA 更新提示：純靜態 GitHub Pages 站點採 prompt-to-refresh，不打斷學生正在閱讀的內容。
+(() => {
+  "use strict";
+
+  if (!("serviceWorker" in navigator)) return;
+
+  const toast = document.querySelector("#sw-update-toast");
+  const updateNow = document.querySelector("#sw-update-now");
+  const updateLater = document.querySelector("#sw-update-later");
+  if (!toast || !updateNow || !updateLater) return;
+
+  let registration = null;
+  let latestVersion = null;
+  let isApplying = false;
+
+  function getNoticeKey(version) {
+    return `ai115-sw-noticed-${version || "new"}`;
+  }
+
+  function wasAlreadyNoticed(version) {
+    try { return window.sessionStorage.getItem(getNoticeKey(version)) === "1"; } catch { return false; }
+  }
+
+  function rememberNotice(version) {
+    try { window.sessionStorage.setItem(getNoticeKey(version), "1"); } catch { /* ignore */ }
+  }
+
+  function showUpdateToast(version = null) {
+    if (isApplying || wasAlreadyNoticed(version)) return;
+    latestVersion = version || latestVersion || "new";
+    toast.hidden = false;
+    updateNow.disabled = false;
+    updateNow.textContent = "立刻更新";
+  }
+
+  function hideUpdateToast(remember = true) {
+    if (remember) rememberNotice(latestVersion);
+    toast.hidden = true;
+  }
+
+  async function applyUpdate() {
+    if (isApplying) return;
+    isApplying = true;
+    updateNow.disabled = true;
+    updateNow.textContent = "更新中…";
+    hideUpdateToast(false);
+
+    try {
+      const activeRegistration = registration || await navigator.serviceWorker.getRegistration("./sw.js");
+      registration = activeRegistration || registration;
+      // 一定在按鈕點擊當下重新取得 waiting，避免兩條偵測路徑互相使用過期 worker。
+      if (registration && !registration.waiting) await registration.update();
+      const waitingWorker = registration?.waiting;
+
+      if (waitingWorker) {
+        let hasReloaded = false;
+        const reloadAfterControllerChange = () => {
+          if (hasReloaded) return;
+          hasReloaded = true;
+          window.location.reload();
+        };
+        navigator.serviceWorker.addEventListener("controllerchange", reloadAfterControllerChange, { once: true });
+        waitingWorker.postMessage({ type: "SKIP_WAITING" });
+        // 若瀏覽器沒有送出 controllerchange，仍保留一次安全的保底重整。
+        window.setTimeout(reloadAfterControllerChange, 4000);
+        return;
+      }
+
+      // 極少數 CDN 延遲情境沒有 waiting worker，重整後由 network-first HTML 再取得最新頁面。
+      window.location.reload();
+    } catch {
+      isApplying = false;
+      updateNow.disabled = false;
+      updateNow.textContent = "再試一次";
+      toast.hidden = false;
+    }
+  }
+
+  updateNow.addEventListener("click", applyUpdate);
+  updateLater.addEventListener("click", () => hideUpdateToast(true));
+
+  function watchInstallingWorker(worker) {
+    worker?.addEventListener("statechange", () => {
+      if (worker.state === "installed" && navigator.serviceWorker.controller) {
+        showUpdateToast();
+      }
+    });
+  }
+
+  async function checkVersionFile() {
+    try {
+      const response = await fetch(`./version.json?t=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) return;
+      const data = await response.json();
+      if (data?.version && data.version !== APP_VERSION) {
+        latestVersion = data.version;
+        if (registration) await registration.update().catch(() => undefined);
+        showUpdateToast(data.version);
+      }
+    } catch {
+      // 離線時不打擾使用者；下次 focus、online 或輪詢會再檢查。
+    }
+  }
+
+  const swUrl = new URL("sw.js", document.baseURI);
+  swUrl.searchParams.set("v", APP_VERSION);
+  navigator.serviceWorker.register(swUrl, { updateViaCache: "none" })
+    .then((nextRegistration) => {
+      registration = nextRegistration;
+      // 新版若已在 waiting，重新開頁也要顯示提示，不能只依賴 updatefound。
+      if (registration.waiting && navigator.serviceWorker.controller) showUpdateToast();
+      if (registration.installing) watchInstallingWorker(registration.installing);
+      registration.addEventListener("updatefound", () => watchInstallingWorker(registration.installing));
+      window.setInterval(() => registration?.update().catch(() => undefined), 60_000);
+    })
+    .catch(() => undefined);
+
+  navigator.serviceWorker.addEventListener("message", (event) => {
+    if (event.data?.type === "SW_ACTIVATED" && navigator.serviceWorker.controller && event.data.version !== APP_VERSION) {
+      showUpdateToast(event.data.version);
+    }
+  });
+
+  ["focus", "online"].forEach((eventName) => window.addEventListener(eventName, checkVersionFile));
+  window.addEventListener("pageshow", (event) => { if (event.persisted) checkVersionFile(); });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") checkVersionFile();
+  });
+  window.setTimeout(checkVersionFile, 5_000);
+  window.setInterval(checkVersionFile, 180_000);
 })();
