@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d4a">
+  <meta name="description" content="給桃園市龍潭區石門國小六年級選手的 115 年度 AI 素養爭霸賽行前準備、練習路線與比賽日手冊。">
+  <title>AI115 海洋實驗室｜石門國小備戰站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
+  <div class="notice-bar">
+    <div class="shell notice-inner">
+      <span><span class="notice-dot" aria-hidden="true"></span>給桃園市龍潭區石門國民小學六年級選手</span>
+      <span class="notice-date">資料查核：民國 115 年 9 月 14 日｜請以官方最新公告為準</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="回到 AI115 海洋實驗室首頁">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span><strong>AI115</strong><small>海洋實驗室</small></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+      <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+        <a href="#start">先做什麼</a>
+        <a href="#competition">比什麼</a>
+        <a href="#practice">怎麼練</a>
+        <a href="#rules">規則紅線</a>
+        <a href="#match-day">比賽日</a>
+        <a class="nav-cta" href="#resources">官方資源</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>桃園市 115 年度</span> 總統盃 AI 素養爭霸賽</p>
+          <h1>讓 AI 下場比賽，<em>兩位六年級，一隊好策略。</em></h1>
+          <p class="hero-lead">這場比賽不是比誰手動操作得快，而是要在現場把資料變成模型，讓自己的 AI 魷魚自己做決定、自己去搶分。</p>
+          <div class="hero-actions">
+            <a class="button button-coral" href="#start">開始備戰 <span aria-hidden="true">↘</span></a>
+            <a class="button button-quiet" href="https://game.tyc.edu.tw/AI115/" target="_blank" rel="noopener">看桃園市官方網站 <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-facts" aria-label="賽事重點">
+            <div><strong>10/3</strong><span>國小組市賽</span></div>
+            <div><strong>2 小時</strong><span>現場訓練與寫程式</span></div>
+            <div><strong>地圖 12</strong><span>正式賽指定關卡</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="AI 魷魚任務面板示意圖">
+          <div class="visual-note note-top">MISSION 01 <span>資料 → 模型</span></div>
+          <div class="ocean-orbit orbit-one"></div>
+          <div class="ocean-orbit orbit-two"></div>
+          <div class="fish-illustration" aria-hidden="true">
+            <svg viewBox="0 0 360 260" role="img" aria-label="一隻在海中前進的魷魚插圖">
+              <path class="fish-shadow" d="M87 181c45 17 135 22 190-8 19-10 35-8 47 3-19 20-57 36-102 41-58 7-105-6-135-23Z"/>
+              <path class="fish-body" d="M67 115c13-51 85-76 151-49 36 15 63 47 70 80-35 27-82 41-133 34-49-7-83-31-88-65Z"/>
+              <path class="fish-fin" d="M227 84c24-28 47-37 71-31-12 27-27 46-52 59Z"/>
+              <path class="fish-fin fish-fin-two" d="M221 167c30 23 56 27 78 18-7-25-23-43-47-53Z"/>
+              <circle class="fish-eye" cx="135" cy="103" r="9"/>
+              <circle class="fish-eye-glint" cx="138" cy="100" r="3"/>
+              <path class="fish-smile" d="M125 129c17 13 36 13 51 3"/>
+              <path class="tentacle" d="M113 168c-6 26-3 44 13 55"/>
+              <path class="tentacle" d="M141 174c-2 28 5 43 22 54"/>
+              <path class="tentacle" d="M171 173c4 25 15 38 33 45"/>
+              <path class="tentacle" d="M199 165c11 20 25 28 44 31"/>
+              <path class="route-line" d="M35 202c30-32 35-62 20-92-10-21-2-41 18-50"/>
+              <circle class="route-dot" cx="35" cy="202" r="7"/>
+              <circle class="route-dot" cx="73" cy="60" r="7"/>
+            </svg>
+          </div>
+          <div class="visual-panel">
+            <div class="panel-row"><span>MODEL STATUS</span><strong><i></i> READY TO LEARN</strong></div>
+            <div class="panel-score"><span>本回合目標</span><strong>吃到食物．閃開垃圾</strong></div>
+            <div class="panel-bars" aria-hidden="true"><span style="--bar: 82%"></span><span style="--bar: 58%"></span><span style="--bar: 71%"></span><span style="--bar: 46%"></span><span style="--bar: 91%"></span></div>
+            <div class="panel-footer"><span>監督式學習</span><span>PAIA 3.3.5</span></div>
+          </div>
+          <div class="visual-note note-bottom">SCORE WITH EVIDENCE <span>不要靠猜</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="deadline-section" aria-labelledby="deadline-title">
+      <div class="shell deadline-inner">
+        <div>
+          <p class="mini-label">現在最重要</p>
+          <h2 id="deadline-title">先把報名與練習環境鎖定</h2>
+        </div>
+        <div class="deadline-clock">
+          <span id="deadline-status">報名截止倒數</span>
+          <strong id="countdown" aria-live="polite">計算中…</strong>
+        </div>
+        <a class="button button-dark" href="https://game.tyc.edu.tw/AI/" target="_blank" rel="noopener">前往學校介面 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="start">
+      <div class="shell">
+        <div class="section-heading heading-split">
+          <div>
+            <p class="eyebrow">01 / START HERE</p>
+            <h2>今天就做完的四件事</h2>
+          </div>
+          <p>兩位學生先組成一隊，由學校安排一位符合規定的指導教師。報名與身分資料由老師、學校端處理；學生的任務是立刻開始熟悉工具與遊戲。</p>
+        </div>
+
+        <div class="start-layout">
+          <div class="action-list">
+            <article class="action-item action-primary">
+              <span class="step-number">01</span>
+              <div><h3>確認隊伍與組別</h3><p>兩位 3–6 年級學生可組成一隊。一般學校報「國小魷魚組」；是否屬偏鄉組，以教育部公告名單與承辦學校確認為準。</p></div>
+              <span class="action-tag">老師處理</span>
+            </article>
+            <article class="action-item">
+              <span class="step-number">02</span>
+              <div><h3>在 9/18（五）中午前完成報名</h3><p>桃園市官方公告的報名期間為 9/10（四）中午 12:00 至 9/18（五）中午 12:00；請從「學校介面」註冊、登入後完成推薦隊伍報名。</p></div>
+              <span class="action-tag">有截止時間</span>
+            </article>
+            <article class="action-item">
+              <span class="step-number">03</span>
+              <div><h3>安裝指定版本</h3><p>練習環境固定使用 PAIA Desktop 3.3.5 與正式賽遊戲「魷來魷去對戰版 1.7.5」。在遊戲設定選「地圖：12」。</p></div>
+              <span class="action-tag">不可用錯版</span>
+            </article>
+            <article class="action-item">
+              <span class="step-number">04</span>
+              <div><h3>先練一次「從零開始」</h3><p>不要把現成程式、資料或模型當成比賽答案。先在計時下練習：蒐集資料 → 訓練 → 測試 → 另存檔案 → 線上檢測。</p></div>
+              <span class="action-tag">今天開局</span>
+            </article>
+          </div>
+
+          <aside class="side-note">
+            <span class="stamp">TEAM RULE</span>
+            <h3>你們的第一個決定</h3>
+            <p>先決定誰負責觀察資料、誰負責操作與測試，再每次練習交換角色。會合作的隊伍，比只會一個人操作更穩。</p>
+            <div class="side-note-line"><span>學生</span><strong>2 人一隊</strong></div>
+            <div class="side-note-line"><span>指導教師</span><strong>1 位</strong></div>
+            <div class="side-note-line"><span>目標</span><strong>合法、穩定、得分</strong></div>
+          </aside>
+        </div>
+
+        <div class="fact-strip">
+          <div><b>參賽對象</b><span>桃園市公私立國中小學生</span></div>
+          <div><b>市賽日期</b><span>115/10/3（六）國小組</span></div>
+          <div><b>市賽地點</b><span>預計於協辦學校電腦教室，依官方公告</span></div>
+          <div><b>身分證明</b><span>學生卡／桃樂卡；沒有則帶學校附照片在學證明</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ink" id="competition">
+      <div class="shell">
+        <div class="section-heading heading-split light-heading">
+          <div>
+            <p class="eyebrow">02 / KNOW THE GAME</p>
+            <h2>這不是打電動，<br><em>是訓練 AI 打電動。</em></h2>
+          </div>
+          <p>正式賽讓 AI 控制魷魚，在時間內吃到食物、避開海洋垃圾、與對手搶分。你的工作不是替魷魚下每一步指令，而是讓模型從資料學會做選擇。</p>
+        </div>
+
+        <div class="game-layout">
+          <div class="game-board">
+            <div class="board-top"><span>SWIMMING SQUID / BATTLE</span><span>ROUND 12</span></div>
+            <div class="board-scene">
+              <span class="scene-food food-a">✦</span><span class="scene-food food-b">✦</span><span class="scene-trash trash-a">▱</span><span class="scene-trash trash-b">▱</span>
+              <span class="scene-target">TARGET</span><span class="scene-wave wave-a"></span><span class="scene-wave wave-b"></span>
+              <div class="mini-squid"><span class="mini-eye"></span><i></i><i></i><i></i></div>
+            </div>
+            <div class="board-bottom"><span>FOOD + SCORE</span><span>TRASH = DANGER</span><span>MODEL → ACTION</span></div>
+          </div>
+          <div class="game-copy">
+            <div class="game-badge">正式賽 / 國小魷魚組</div>
+            <h3>魷來魷去對戰版 1.7.5</h3>
+            <p>官方指定關卡為第 12 關，直接在「遊戲設定」選取「地圖：12」，不必另外上傳關卡檔案。</p>
+            <div class="versus-row">
+              <div><span>你要提供</span><strong>資料＋模型＋程式</strong></div>
+              <div class="versus-mark">VS</div>
+              <div><span>系統會看</span><strong>AI 對戰分數</strong></div>
+            </div>
+            <a class="text-link light-link" href="https://proj.moe.edu.tw/AI-literacy/News_Video_Content.aspx?n=6296&s=24431" target="_blank" rel="noopener">先看官方遊戲介紹 ↗</a>
+          </div>
+        </div>
+
+        <div class="mode-table" role="table" aria-label="正式賽與表演賽比較">
+          <div class="mode-row mode-head" role="row"><span role="columnheader">項目</span><span role="columnheader">正式賽：你們的主戰場</span><span role="columnheader">表演賽：另一種玩法</span></div>
+          <div class="mode-row" role="row"><span role="rowheader">遊戲</span><strong>魷來魷去對戰版 1.7.5</strong><span>Proly 定向越野大作戰 1.4.5</span></div>
+          <div class="mode-row" role="row"><span role="rowheader">學習方式</span><strong>監督式學習</strong><span>強化式學習</span></div>
+          <div class="mode-row" role="row"><span role="rowheader">今年指定設定</span><strong>地圖：12</strong><span>四泉遊樂場</span></div>
+          <div class="mode-row" role="row"><span role="rowheader">準備建議</span><strong>優先把正式賽練熟</strong><span>有餘力再研究</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="how">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">03 / THE AI LOOP</p>
+          <h2>一場比賽的六個站點</h2>
+          <p class="section-intro">把流程記成一條線。每一次練習都要走完一圈，才知道問題是在資料、模型、程式、檔案，還是上傳。</p>
+        </div>
+
+        <div class="loop-grid">
+          <article class="loop-card loop-card-main"><span class="loop-index">01</span><div class="loop-icon">◎</div><h3>看懂遊戲</h3><p>認識食物、垃圾、對手、座標、角度與距離。</p><span class="loop-note">先問：我希望 AI 學會什麼？</span></article>
+          <div class="loop-arrow" aria-hidden="true">→</div>
+          <article class="loop-card"><span class="loop-index">02</span><div class="loop-icon">⌁</div><h3>蒐集資料</h3><p>操作魷魚留下「當時看見什麼、最後做了什麼」的樣本。</p><span class="loop-note">資料要有變化、有代表性</span></article>
+          <div class="loop-arrow" aria-hidden="true">→</div>
+          <article class="loop-card"><span class="loop-index">03</span><div class="loop-icon">▦</div><h3>訓練模型</h3><p>使用正式賽要求的監督式學習，讓模型從樣本找規律。</p><span class="loop-note">模型不是規則清單</span></article>
+          <div class="loop-arrow" aria-hidden="true">→</div>
+          <article class="loop-card"><span class="loop-index">04</span><div class="loop-icon">↗</div><h3>測試推論</h3><p>用沒看過的情境測試，觀察 AI 是否真的能判斷。</p><span class="loop-note">看結果，不只看感覺</span></article>
+          <div class="loop-arrow" aria-hidden="true">→</div>
+          <article class="loop-card"><span class="loop-index">05</span><div class="loop-icon">⟳</div><h3>迭代修正</h3><p>補足資料、調整特徵或重新訓練，再比一次。</p><span class="loop-note">一次只改一件事</span></article>
+          <div class="loop-arrow" aria-hidden="true">→</div>
+          <article class="loop-card loop-card-end"><span class="loop-index">06</span><div class="loop-icon">↑</div><h3>匯出上傳</h3><p>準備 <code>ml_play.py</code> 與模型檔，通過 AI 線上檢測。</p><span class="loop-note">檔名與大小也會決定能否出場</span></article>
+        </div>
+
+        <div class="concept-callout">
+          <div class="callout-label">小學生版</div>
+          <p><strong>資料</strong>像是 AI 的練習題，<strong>模型</strong>像是 AI 的經驗，<strong>推論</strong>就是 AI 遇到新情況時做出的答案。</p>
+          <span>所以：資料亂，模型就容易亂；只背規則，不算真正的模型學習。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand" id="practice">
+      <div class="shell">
+        <div class="section-heading heading-split">
+          <div>
+            <p class="eyebrow">04 / PRACTICE ROUTE</p>
+            <h2>從今天到 10/3 的練習航線</h2>
+          </div>
+          <p>以下是依目前日期與官方市賽日程安排的教練版計畫。每天 30–60 分鐘即可累積；週末再做一次完整計時。官方公告若更新，日期與規則優先於本站。</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item is-now">
+            <div class="timeline-date"><b>09/14–09/18</b><span>第 1 航段</span></div>
+            <div class="timeline-marker"><span>01</span></div>
+            <div class="timeline-content"><span class="timeline-tag">現在先完成</span><h3>登入、安裝、確認版本</h3><p>確認教育雲端 OpenID；安裝 PAIA Desktop 3.3.5；取得魷來魷去對戰版 1.7.5；確認可選地圖 12。同步完成市賽報名。</p><ul><li>每位學生都能獨立登入與開啟專案</li><li>能說出正式賽是監督式學習</li><li>把專案命名成可辨識的版本，例如 <code>squid_map12_01</code></li></ul></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date"><b>09/19–09/21</b><span>第 2 航段</span></div>
+            <div class="timeline-marker"><span>02</span></div>
+            <div class="timeline-content"><h3>玩懂地圖，練習觀察</h3><p>先不急著訓練。請學生手動操作，記錄食物、垃圾、對手與自己位置的變化，理解遊戲介紹中的座標與物件。</p><ul><li>一人操作、一人用紙筆記錄「看到什麼 → 做了什麼」</li><li>交換角色再做一次，避免只會一個人的流程</li><li>整理哪些情境值得當成訓練樣本</li></ul></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date"><b>09/22–09/25</b><span>第 3 航段</span></div>
+            <div class="timeline-marker"><span>03</span></div>
+            <div class="timeline-content"><h3>蒐集樣本，訓練第一個模型</h3><p>依官方教材使用蒐集、訓練積木，讓模型從有標記的資料學習。先追求流程完整，再追求分數。</p><ul><li>樣本要涵蓋不同距離、角度與場上狀況</li><li>不要只收集「容易吃到食物」的單一情境</li><li>保留每次測試結果與改動原因</li></ul></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date"><b>09/26–09/28</b><span>第 4 航段</span></div>
+            <div class="timeline-marker"><span>04</span></div>
+            <div class="timeline-content"><h3>測試、比較、找出穩定版本</h3><p>用不同情境測試模型，觀察是否會撞垃圾、繞遠路或遇到對手就失去方向。一次只改一個因素，才知道哪個調整有效。</p><ul><li>至少留下兩個候選版本，寫下各自優缺點</li><li>用對戰工具比較，不用一次好運的分數下結論</li><li>檢查程式是否真的載入模型，而不是靠條件式送指令</li></ul></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date"><b>09/29–10/02</b><span>第 5 航段</span></div>
+            <div class="timeline-marker"><span>05</span></div>
+            <div class="timeline-content"><h3>完整模擬：兩小時、從零開始</h3><p>清空桌面與資料夾，照比賽規則從零寫程式、現場蒐集資料、訓練與測試。這次不使用預存檔，練的是臨場反應與合作。</p><ul><li>倒數結束前完成 <code>ml_play.py</code> 與模型檔</li><li>確認檔案總和小於 20 MB</li><li>演練「一人操作、一人逐項口頭核對」的上傳前檢查</li></ul></div>
+          </article>
+          <article class="timeline-item timeline-final">
+            <div class="timeline-date"><b>10/03（六）</b><span>市賽日</span></div>
+            <div class="timeline-marker"><span>GO</span></div>
+            <div class="timeline-content"><span class="timeline-tag tag-coral">上場</span><h3>穩穩完成每個合法步驟</h3><p>08:00–08:40 報到；09:00–11:00 現場訓練；11:00–12:00 上傳繳交；下午依抽籤進入雙敗淘汰對戰。先完成、再優化、最後才拚分。</p></div>
+          </article>
+        </div>
+
+        <div class="role-board">
+          <div class="role-intro"><p class="eyebrow">PAIR WORK</p><h3>兩個人怎麼合作？</h3><p>每一回合交換角色，讓兩位學生都能獨立完成全流程。</p></div>
+          <div class="role-card role-observe"><span class="role-number">A</span><div><h4>資料觀察員</h4><p>看遊戲、描述情境、檢查樣本是否多樣，提醒隊友不要只記住單一答案。</p><small>關鍵句：「這個情況以前出現過嗎？」</small></div></div>
+          <div class="role-card role-build"><span class="role-number">B</span><div><h4>程式測試員</h4><p>拖拉積木、訓練模型、測試推論、保存檔案，並在每次改動後記錄結果。</p><small>關鍵句：「這次到底改了哪一件事？」</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ink section-rules" id="rules">
+      <div class="shell">
+        <div class="section-heading heading-split light-heading">
+          <div>
+            <p class="eyebrow">05 / STAY IN THE GAME</p>
+            <h2>先過合法檢查，<br><em>才有分數可以拚。</em></h2>
+          </div>
+          <p>以下「紅線」整理自桃園市實施計畫與 115/08/31 公布版全國競賽細則。這些不是小提醒，而是可能失格、淘汰或無法上傳的關鍵。</p>
+        </div>
+
+        <div class="rules-grid">
+          <div class="rule-column rule-yes">
+            <div class="rule-heading"><span class="rule-symbol">✓</span><h3>一定要做到</h3></div>
+            <ul>
+              <li><strong>從零開始：</strong>比賽 2 小時內現場寫程式、蒐集資料、訓練與測試模型。</li>
+              <li><strong>用對學習法：</strong>正式賽「魷來魷去」必須採用監督式學習。</li>
+              <li><strong>模型來決策：</strong>遊戲指令要由 AI 模型預測結果直接或間接控制。</li>
+              <li><strong>檔案準備正確：</strong><code>ml_play.py</code> 搭配自訂名稱的 <code>.pickle</code> 或 <code>.zip</code>。</li>
+              <li><strong>通過檢測：</strong>上傳後確認 AI 能在競賽平台正常執行。</li>
+              <li><strong>控制大小：</strong>上傳檔案總和不得超過 20 MB。</li>
+            </ul>
+          </div>
+          <div class="rule-column rule-no">
+            <div class="rule-heading"><span class="rule-symbol">×</span><h3>不要踩到紅線</h3></div>
+            <ul>
+              <li>不要用 <strong>if/else 等硬編碼規則</strong>直接把題目答案轉成遊戲指令。</li>
+              <li>不要載入事先準備好的資料、模型或程式；所有資料與模型都要現場產生。</li>
+              <li>比賽中除了上傳 AI 程式與模型，不能上網下載外部模型、資料集或使用第三方即時服務。</li>
+              <li>不要利用系統漏洞、未公告參數或非授權方式取得優勢。</li>
+              <li>不要把額外的資訊設備帶進會場；依市賽規定使用會場提供的電腦與工具。</li>
+              <li>不要遲到、離席或和其他隊伍交談；現場秩序也是競賽規範的一部分。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="file-checker">
+          <div><span class="mini-label">上傳前口訣</span><h3>程式、模型、大小、檢測</h3></div>
+          <div class="file-chips"><code>ml_play.py</code><span>＋</span><code>model.pickle / .zip</code><span>≤</span><strong>20 MB</strong><span>→</span><b>AI 檢測通過</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="match-day">
+      <div class="shell">
+        <div class="section-heading heading-split">
+          <div>
+            <p class="eyebrow">06 / MATCH DAY</p>
+            <h2>比賽日照表走，<br>不用慌。</h2>
+          </div>
+          <p>市賽的國小組安排在 10/3（六）。競賽時程可能依現場調整，正式入場時間與場地請以桃園市官方網站最新公告為準。</p>
+        </div>
+
+        <div class="match-layout">
+          <div class="schedule">
+            <div class="schedule-row"><time>08:00–08:40</time><div><strong>選手報到</strong><span>核對身分、到指定座位</span></div><b>到場</b></div>
+            <div class="schedule-row"><time>08:50–09:00</time><div><strong>規則說明、公布題目</strong><span>兩人一起聽清楚，不搶跑</span></div><b>聽題</b></div>
+            <div class="schedule-row schedule-highlight"><time>09:00–11:00</time><div><strong>寫程式、蒐集資料、訓練 AI</strong><span>2 小時；所有資料與模型現場完成</span></div><b>訓練</b></div>
+            <div class="schedule-row"><time>11:00–12:00</time><div><strong>作品上傳繳交</strong><span>工作人員確認作品繳交無誤</span></div><b>交件</b></div>
+            <div class="schedule-row"><time>12:50–13:00</time><div><strong>隨機抽籤分組「對戰」表</strong><span>確認自己是 1P 或 2P</span></div><b>抽籤</b></div>
+            <div class="schedule-row schedule-last"><time>13:00–18:00</time><div><strong>雙敗淘汰對戰</strong><span>每場三戰二勝；分數高者勝</span></div><b>對戰</b></div>
+          </div>
+          <aside class="match-aside">
+            <div class="aside-burst">CITY<br>STAGE</div>
+            <h3>下午怎麼看賽程？</h3>
+            <p>第一次輸不等於出局，雙敗淘汰的敗者會進入敗部；敗部再敗才淘汰。每場三戰二勝，平分時依規定延長直到分出勝負。</p>
+            <div class="bracket"><span class="bracket-a">勝部</span><i></i><span class="bracket-b">敗部</span><i></i><span class="bracket-c">晉級／淘汰</span></div>
+          </aside>
+        </div>
+
+        <div class="checklist-block">
+          <div class="checklist-heading"><div><p class="eyebrow">READY CHECK</p><h3>出發前自我檢查</h3></div><span id="check-progress">0 / 8 完成</span></div>
+          <div class="checklist" id="checklist">
+            <label class="check-item"><input type="checkbox" data-check="identity"><span class="check-box"></span><span>學生卡／桃樂卡，或附照片在學證明已確認</span></label>
+            <label class="check-item"><input type="checkbox" data-check="team"><span class="check-box"></span><span>記得隊友姓名、指導教師與報名組別</span></label>
+            <label class="check-item"><input type="checkbox" data-check="version"><span class="check-box"></span><span>PAIA Desktop 3.3.5、魷來魷去 1.7.5、地圖 12 都練過</span></label>
+            <label class="check-item"><input type="checkbox" data-check="loop"><span class="check-box"></span><span>兩人都能說出「蒐集 → 訓練 → 測試 → 上傳」</span></label>
+            <label class="check-item"><input type="checkbox" data-check="files"><span class="check-box"></span><span>知道 <code>ml_play.py</code> 與模型檔的命名、格式與 20 MB 限制</span></label>
+            <label class="check-item"><input type="checkbox" data-check="legal"><span class="check-box"></span><span>知道不能載入預存資料／模型、不能用規則直接下指令</span></label>
+            <label class="check-item"><input type="checkbox" data-check="arrival"><span class="check-box"></span><span>已安排 08:00–08:40 報到的交通與陪同方式</span></label>
+            <label class="check-item"><input type="checkbox" data-check="devices"><span class="check-box"></span><span>知道會場使用大會提供的設備，不帶額外資訊設備入場</span></label>
+          </div>
+          <button class="reset-button" id="reset-checklist" type="button">清除本機勾選紀錄</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand" id="rank">
+      <div class="shell">
+        <div class="section-heading heading-split">
+          <div>
+            <p class="eyebrow">07 / COACHING NOTES</p>
+            <h2>想取得名次，<br>先把可控制的事做好。</h2>
+          </div>
+          <p>沒有人能保證名次；但可以把「失格風險、臨場失誤、模型不穩」一項項降下來。下面是教練建議，不是主辦單位另訂的評分公式。</p>
+        </div>
+        <div class="rank-grid">
+          <article class="rank-card rank-legal"><span>第一層</span><strong>不失格</strong><p>版本正確、檔案正確、從零完成、模型合法、通過檢測。</p><div class="rank-meter"><i style="width: 100%"></i></div></article>
+          <article class="rank-card rank-stable"><span>第二層</span><strong>夠穩定</strong><p>資料有代表性；測試不是只靠一次運氣；兩位選手都能完成流程。</p><div class="rank-meter"><i style="width: 76%"></i></div></article>
+          <article class="rank-card rank-score"><span>第三層</span><strong>拚分數</strong><p>在合法與穩定的基礎上，逐步改善取食、避險與對戰表現。</p><div class="rank-meter"><i style="width: 52%"></i></div></article>
+        </div>
+        <div class="race-plan">
+          <div class="race-plan-title"><span class="stamp">COACH'S CLOCK</span><h3>兩小時練習配時（建議版）</h3><p>這是練習用節奏，不是官方硬性分段；正式競賽以現場說明與官方規則為準。</p></div>
+          <div class="race-steps"><div><b>00:00</b><span>讀題、確認地圖與分工</span></div><div><b>00:10</b><span>快速蒐集第一批樣本</span></div><div><b>00:35</b><span>訓練第一個可運作模型</span></div><div><b>01:05</b><span>測試、記錄、補樣本</span></div><div><b>01:35</b><span>比較候選版本並選一組</span></div><div><b>01:50</b><span>匯出、核對、準備上傳</span></div></div>
+        </div>
+        <div class="next-stage"><div><span class="mini-label">如果市賽拿到特優</span><h3>還有一段全國任務</h3></div><p>依桃園市實施計畫，特優隊伍須代表本市參加全國 AI 競賽與集訓；這是可能的後續，不是現在就能保證的名次。</p><div class="next-stage-dates"><b>10/28<small>全國模型訓練與上傳</small></b><b>11/13<small>全國決賽暨頒獎典禮</small></b></div></div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="quiz">
+      <div class="shell quiz-layout">
+        <div class="quiz-intro"><p class="eyebrow">08 / QUICK QUIZ</p><h2>你真的準備好了嗎？</h2><p>請兩位選手輪流作答。答錯沒關係，把解釋看完再說一次。</p><div class="quiz-score" id="quiz-score" aria-live="polite">0 / 4</div></div>
+        <div class="quiz-box" id="quiz-box">
+          <article class="quiz-question" data-correct="b"><span>Q1</span><h3>正式賽的學習方式是什麼？</h3><div class="quiz-options"><button type="button" data-answer="a">A　強化式學習</button><button type="button" data-answer="b">B　監督式學習</button><button type="button" data-answer="c">C　只用 if/else</button></div><p class="quiz-feedback"></p></article>
+          <article class="quiz-question" data-correct="c"><span>Q2</span><h3>今年正式賽指定哪一張地圖？</h3><div class="quiz-options"><button type="button" data-answer="a">A　四泉遊樂場</button><button type="button" data-answer="b">B　自由選地圖</button><button type="button" data-answer="c">C　地圖 12</button></div><p class="quiz-feedback"></p></article>
+          <article class="quiz-question" data-correct="a"><span>Q3</span><h3>上傳時至少要有哪一個固定檔名？</h3><div class="quiz-options"><button type="button" data-answer="a">A　ml_play.py</button><button type="button" data-answer="b">B　answer.exe</button><button type="button" data-answer="c">C　game.txt</button></div><p class="quiz-feedback"></p></article>
+          <article class="quiz-question" data-correct="b"><span>Q4</span><h3>哪個做法可能違反規則？</h3><div class="quiz-options"><button type="button" data-answer="a">A　現場蒐集資料再訓練</button><button type="button" data-answer="b">B　載入賽前準備好的模型</button><button type="button" data-answer="c">C　測試模型後再選版本</button></div><p class="quiz-feedback"></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand" id="faq">
+      <div class="shell">
+        <div class="section-heading heading-split">
+          <div><p class="eyebrow">09 / QUESTIONS</p><h2>學生、家長、老師<br>最常問的事</h2></div>
+          <p>先把疑問排除，練習時就能把注意力放在模型與合作。涉及資格、場地或規則解釋時，仍要直接詢問桃園市承辦單位。</p>
+        </div>
+        <div class="faq-list">
+          <details open><summary>兩位六年級學生要怎麼報名？</summary><p>兩位學生可以組成一隊，並由學校安排一位符合規定的指導教師。若石門國小不是偏鄉學校，目標組別就是「國小魷魚組」；偏鄉身分請由學校依教育部名單確認。</p></details>
+          <details><summary>一定要會 Python 才能參賽嗎？</summary><p>不必一開始就會。PAIA Desktop 可以用積木開發 AI，官方說明也指出積木會轉換成 Python；你們要先熟悉「蒐集、訓練、測試」的概念，再練習把程式另存成 <code>ml_play.py</code>。</p></details>
+          <details><summary>學校練好的模型可以帶去比賽嗎？</summary><p>不能把賽前資料、模型或程式當成正式競賽素材載入。學校練習的目標是熟悉流程與策略；正式比賽要在現場從零撰寫、蒐集資料、訓練與測試。</p></details>
+          <details><summary>比賽時可以查網路或問 AI 嗎？</summary><p>不行。依競賽規範，除了上傳 AI 程式與模型外，不能使用網路下載外部模型、資料集或第三方即時服務；也不要用其他資訊設備帶入會場。</p></details>
+          <details><summary>如果第一場輸了，是不是馬上淘汰？</summary><p>桃園市賽採雙敗淘汰；敗者先進入敗部，敗部再敗才淘汰。每場三戰二勝，分數相同時依規定延長，所以第一場輸了先冷靜、檢查下一場的模型表現。</p></details>
+          <details><summary>市賽特優之後還有什麼安排？</summary><p>桃園市實施計畫載明，各組特優隊伍須代表本市參加當年度全國 AI 競賽並參加集訓；全國競賽的模型訓練與上傳暫列 115/10/28，頒獎典禮暫列 115/11/13，細節以後續通知為準。</p></details>
+        </div>
+        <div class="contact-strip"><div><span class="mini-label">市賽疑義窗口</span><strong>仁德國小 王懷憲主任</strong></div><div><span>03-3683536 #210</span><a href="mailto:damson@ms.tyc.edu.tw">damson@ms.tyc.edu.tw</a></div><span>請先看最新公告，再聯絡承辦</span></div>
+      </div>
+    </section>
+
+    <section class="section section-ink" id="resources">
+      <div class="shell">
+        <div class="section-heading heading-split light-heading">
+          <div><p class="eyebrow">10 / OFFICIAL SOURCES</p><h2>官方資源，<br><em>收藏這一頁就夠。</em></h2></div>
+          <p>本站把重點整理成學生版，但正式規則可能更新。每次練習前、比賽前一天，請由指導教師重新打開官方公告核對。</p>
+        </div>
+        <div class="resource-grid">
+          <a class="resource-card resource-feature" href="https://game.tyc.edu.tw/AI115/" target="_blank" rel="noopener"><span class="resource-label">桃園市官方</span><h3>AI115 競賽入口</h3><p>最新消息、學校介面、學生比賽與桃園市賽公告的總入口。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://game.tyc.edu.tw/AI115/index.php?do=news" target="_blank" rel="noopener"><span class="resource-label">必看公告</span><h3>最新消息列表</h3><p>目前可見報名、指定版本／題目、學習資源與教師研習等公告。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://game.tyc.edu.tw/AI115/index.php?do=news&op=view&id=9" target="_blank" rel="noopener"><span class="resource-label">報名</span><h3>桃園市報名公告</h3><p>9/10 中午至 9/18 中午；先由學校介面註冊與登入。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://proj.moe.edu.tw/Ai-literacy/News_Content.aspx?n=6285&s=24486" target="_blank" rel="noopener"><span class="resource-label">版本／題目</span><h3>指定工具與地圖公告</h3><p>PAIA 3.3.5、魷來魷去 1.7.5，以及正式賽地圖 12。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://proj.moe.edu.tw/AI-literacy/News_Content.aspx?n=6285&s=24495&sms=14501" target="_blank" rel="noopener"><span class="resource-label">規則原文</span><h3>115/08/31 競賽細則</h3><p>全國競賽細則與設備規格；用來核對程式合法性與比賽紅線。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://proj.moe.edu.tw/Ai-literacy/cp.aspx?n=8258" target="_blank" rel="noopener"><span class="resource-label">教育部教材</span><h3>教學資源總頁</h3><p>PAIA 平台全解析、魷來魷去課程、官方影片與教材簡報。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://class.paia-arena.com/course/view.php?id=20" target="_blank" rel="noopener"><span class="resource-label">OpenID 登入</span><h3>讓我們一起魷來魷去</h3><p>依課程從手動操作走到資料、模型、測試與競賽上傳。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://app.paia-arena.com/zh" target="_blank" rel="noopener"><span class="resource-label">工具下載</span><h3>PAIA Desktop 下載</h3><p>從官方 PAIA 頁面右上角「下載桌面版」取得 Windows 或 macOS 版本。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="resources/AI115_Taoyuan_Implementation_Plan.pdf" target="_blank" rel="noopener"><span class="resource-label">本地備查</span><h3>桃園市實施計畫 PDF</h3><p>本教材附上的原始 PDF，包含資格、時程、規則、獎勵、授權同意書與附件。</p><span class="resource-arrow">↗</span></a>
+          <a class="resource-card" href="https://youtube.com/playlist?list=PLNoIZTp5eXCQ&si=dWHtzPbjYNpzRMBe" target="_blank" rel="noopener"><span class="resource-label">影片課程</span><h3>115 年線上解題課程</h3><p>從官方播放清單挑選正式賽主題，適合老師備課與學生複習。</p><span class="resource-arrow">↗</span></a>
+        </div>
+        <div class="source-note"><span>最後查核 2026/09/14</span><span>本頁為石門國小備戰教材，不是主辦單位官方網站。</span><span>如果規則不同，以官方公告為準。</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>AI115 海洋實驗室</strong><span>給桃園市龍潭區石門國民小學六年級選手的行前教材</span></div>
+      <a href="#top">回到頁首 ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
