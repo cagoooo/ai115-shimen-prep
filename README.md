@@ -56,3 +56,18 @@ powershell -ExecutionPolicy Bypass -File scripts\bump-version.ps1 -Notes "更新
 ## 更新原則
 
 網站內容查核基準為 2026-09-14。桃園市報名期限、場地、競賽時程與工具版本可能由主辦單位更新；正式比賽前請以 [桃園市 AI115 官方網站](https://game.tyc.edu.tw/AI115/) 與 [教育部 AI 素養爭霸賽官網](https://proj.moe.edu.tw/Ai-literacy/) 為準。
+
+<!-- akai-edu-tools:backlink -->
+
+---
+
+## 🔗 阿凱老師教育工具集
+
+這個專案是[阿凱老師教育工具集](https://cagoooo.github.io/Akai/)的 **#127 桃園市AI素養爭霸賽**，由桃園市龍潭區石門國民小學阿凱老師開發。
+
+- 工具介紹頁：[https://cagoooo.github.io/Akai/tool/127/](https://cagoooo.github.io/Akai/tool/127/)
+- 線上使用：[https://cagoooo.github.io/ai115-shimen-prep/](https://cagoooo.github.io/ai115-shimen-prep/)
+- 教學情境文章：[https://cagoooo.github.io/Akai/blog/ai-literacy-127-taoyuan-competition-prep/](https://cagoooo.github.io/Akai/blog/ai-literacy-127-taoyuan-competition-prep/)
+- 全部工具（上百個教育工具與原始碼）：[https://cagoooo.github.io/Akai/](https://cagoooo.github.io/Akai/)
+
+想改造成自己的版本？到上面的教學情境文章，按左下角「複製 AI 開發提示詞」，貼給 ChatGPT、Claude、Gemini 等 AI 助手，就能參考這份原始碼開始規劃。
