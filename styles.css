@@ -675,6 +675,13 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 .footer-inner strong { color: var(--white); font-family: var(--mono); letter-spacing: .08em; }
 .footer-inner a { color: var(--sun); text-decoration: none; }
 .footer-inner a:hover { text-decoration: underline; text-underline-offset: .2em; }
+/* 作者署名列（2026-11-17） */
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .6rem 1rem; padding: 1rem 0 1.2rem; border-top: 1px solid rgba(168, 192, 188, .22); }
+.site-credit { margin: 0; color: var(--mist); font-size: .9rem; }
+.site-credit__heart { display: inline-block; margin: 0 .1rem; filter: saturate(1.1); }
+.site-credit__author { color: var(--sun); font-weight: 700; text-decoration: none; border-bottom: 1px dotted currentColor; padding: .3rem 0 1px; }
+.site-credit__author:hover, .site-credit__author:focus-visible { border-bottom-style: solid; }
+.version-tag { margin: 0; padding: .15rem .7rem; border: 1px solid rgba(244, 185, 66, .45); border-radius: 999px; color: #d6e3df; background: rgba(255, 253, 248, .06); font-family: var(--mono); font-size: .78rem; letter-spacing: .04em; }
 
 @media (max-width: 1050px) {
   .site-nav a { padding-inline: .45rem; font-size: .78rem; }
@@ -734,6 +741,9 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 }
 
 @media (max-width: 560px) {
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-school { display: block; margin-top: .2rem; }
+  .footer-dot { display: none; }
   .shell { width: min(100% - 1.4rem, 430px); }
   .section { padding: 4.5rem 0; }
   h1 { font-size: clamp(2.8rem, 16vw, 4.5rem); }
